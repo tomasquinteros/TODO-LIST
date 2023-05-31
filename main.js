@@ -6,6 +6,7 @@ const btnClearAll = document.querySelector(".btnClearAll")
 const taskData = [];
 const getData = localStorage.getItem("data")
 empty.style.color = "red";
+empty.style.padding = "2rem";
 if (getData) {
   JSON.parse(getData).forEach(element => {
     createElement(element.task)
