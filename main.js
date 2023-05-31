@@ -11,9 +11,9 @@ if (getData) {
   JSON.parse(getData).forEach(element => {
     createElement(element.task)
     taskData.push(element)
-    empty.style.display = "none"
   });
 }
+
 
 btnADD.addEventListener("click", event => {
   event.preventDefault();
@@ -23,8 +23,8 @@ btnADD.addEventListener("click", event => {
     createElement(text)
     addNewTask(text)
   }
-  empty.style.display = "none"
   inputTask.value = ""
+
 })
 
 function createElement(text) {
@@ -56,10 +56,6 @@ function addButtonDelete () {
     }
     localStorage.setItem("data", JSON.stringify(taskData))
     tasks.removeChild(list);
-    if (liQuantities === 0) {
-      console.log(liQuantities)
-      empty.style.display = "block"
-    }
   })
   return btnDel;
 }
