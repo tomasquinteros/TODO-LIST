@@ -1,9 +1,12 @@
+import JSConfetti from "js-confetti";
+
+const jsConfetti = new JSConfetti()
 const inputTask = document.querySelector("input")
 const btnADD = document.querySelector(".btnSubmit")
 const tasks = document.querySelector(".ul-container");
 const empty = document.querySelector("span")
-const btnClearAll = document.querySelector(".btnClearAll")
 const taskData = [];
+const allCheckBox = document.getElementsByClassName("checkbox");
 const getData = localStorage.getItem("data")
 empty.style.color = "red";
 empty.style.padding = "2rem";
@@ -46,7 +49,6 @@ function addButtonDelete () {
   btnDel.classList.add = "deleted";
   btnDel.textContent = "X"
   btnDel.addEventListener("click", event => {
-    const liQuantities = document.querySelectorAll("li").length;
     const list = event.target.parentElement;
     const p = list.querySelector("p.task-parraf").textContent;
     for (let i=0; i < taskData.length; i++) {
@@ -59,21 +61,31 @@ function addButtonDelete () {
   })
   return btnDel;
 }
-
+let checkedQuantity = 0
 function addCheckCompleted () {
   const inputCompleted = document.createElement("input")
   inputCompleted.type = "checkbox";
+  inputCompleted.classList.add("checkbox");
   inputCompleted.addEventListener("click", event => {
     const { checked } = event.currentTarget;
     const list = inputCompleted.parentNode
-    const p = document.querySelector("p.task-parraf")
+    console.log(list)
+    const p = list.querySelector("p.task-parraf")
+    
     if (checked) {
       p.style.textDecoration = "line-through";
       list.style.opacity = "0.75"
+      checkedQuantity++
     } else {
       p.style.textDecoration = "none"
       list.style.opacity = "1"
+      checkedQuantity--
     }
+    console.log(allCheckBox.length)
+    if (checkedQuantity === allCheckBox.length) {
+      jsConfetti.addConfetti()
+    }
+    console.log(checkedQuantity)
   })
   return inputCompleted;
 }
