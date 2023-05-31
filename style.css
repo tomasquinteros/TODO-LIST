@@ -61,7 +61,6 @@ section.controlers input:focus {
   list-style: none;
   gap: 0.5rem;
   width: 100%;
-  margin: 0;
   padding: 0;
 }
 .ul-container li {
@@ -85,16 +84,19 @@ section.controlers input:focus {
   background-color: #FE4D4D;
   padding: 0.5rem 1rem;
   font-size: 2rem;
-  cursor: pointer;
+
 }
 .ul-container li button:hover {
   background-color:  #ea0000;
+  }
+  button, input {
+    cursor: pointer;
   }
 input[type="checkbox"] {
   width: 3rem;
   height: 3rem;
   outline: none;
-  cursor: pointer;
+
 }
 .btnSubmit {
   background-color: /* #00C040 */ #32CD32;
@@ -102,7 +104,6 @@ input[type="checkbox"] {
   font-size: 1rem;
   font-weight: 700;
   transition: all 150ms;
-  cursor: pointer;
 }
 .btnSubmit:hover {
   background-color: #138808;
@@ -115,14 +116,14 @@ input[type="checkbox"] {
   color: white;
   font-weight: 700;
   transition: all 150ms;
-  cursor: pointer;
+
 }
 .deleted:hover {
 background-color:  #ea0000;
 }
 .btnClearAll {
   font-size: 1rem;
-  cursor: pointer;
+
 }
 
 @media (max-width: 425px) {
