@@ -1,0 +1,126 @@
+:root {
+  font-family: "Ubuntu", sans-serif;
+}
+body {
+  background: rgb(37,141,196);
+background: linear-gradient(90deg, rgba(37,141,196,0.6727065826330532) 14%, rgba(107,138,137,1) 64%);
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 4rem;
+  color: rgb(138, 0, 131);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+  width: 100%;
+}
+section.controlers {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+form {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+section.controlers input {
+  width: 100%;
+  padding: 1.2rem 2.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+}
+button {
+  padding: 1.2rem 2.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+section.controlers input:focus {
+  box-shadow: 0 0 0.3rem rgba(29, 28, 28, 0.267);
+  outline: none;
+}
+.ul-container {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 0.5rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.ul-container li {
+  background-color: white;
+  padding: 0.3rem 1.2rem;
+  border-radius: 1rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.ul-container li p {
+  color: rgb(54, 54, 54);
+  flex: 1;
+  font-size: 1.4rem;
+}
+.ul-container li button {
+  margin-left: auto;
+  background-color: #FE4D4D;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.ul-container li button:hover {
+  background-color:  #ea0000;
+  }
+input[type="checkbox"] {
+  width: 3rem;
+  height: 3rem;
+  outline: none;
+  cursor: pointer;
+}
+.btnSubmit {
+  background-color: /* #00C040 */ #32CD32;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 150ms;
+  cursor: pointer;
+}
+.btnSubmit:hover {
+  background-color: #138808;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.deleted {
+  background-color: #FE4D4D;
+  color: white;
+  font-weight: 700;
+  transition: all 150ms;
+  cursor: pointer;
+}
+.deleted:hover {
+background-color:  #ea0000;
+}
+.btnClearAll {
+  font-size: 1rem;
+  cursor: pointer;
+}
